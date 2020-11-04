@@ -15,7 +15,8 @@ window.zESettings = {
 window.userpilotSettings = { token: "55mi72q1" };
 
 const interval = setInterval(() => {
-  if (window !== "undefined" && window.userpilot) {
+  if (window !== "undefined" && window.zE) {
+    window.zE("webWidget:on", "open", () => {});
     clearInterval(interval);
   }
 }, 100);
